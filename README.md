@@ -2,7 +2,7 @@
 
 Projeto de portfólio web desenvolvido para a disciplina de Desenvolvimento Front-End para Web no Centro Universitário Braz Cubas.
 
-## 🚀 Estrutura do Site
+## Estrutura do Site
 - `index.html`: Página inicial com apresentação e navegação principal.
 - `curriculo.html`: Trajetória acadêmica e profissional.
 - `formulario.html`: Formulário de contato com validação e feedback visual.
