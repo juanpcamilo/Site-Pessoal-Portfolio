@@ -1,8 +1,8 @@
-# Portfólio Pessoal - Checkpoint 3 (CP3)
+Portfólio Pessoal 
 
 Projeto de portfólio web desenvolvido para a disciplina de Desenvolvimento Front-End para Web no Centro Universitário Braz Cubas.
 
-## 🚀 Estrutura do Site
+##  Estrutura do Site
 - `index.html`: Página inicial com apresentação e navegação principal.
 - `curriculo.html`: Trajetória acadêmica e profissional.
 - `formulario.html`: Formulário de contato com validação e feedback visual.
@@ -11,16 +11,16 @@ Projeto de portfólio web desenvolvido para a disciplina de Desenvolvimento Fron
 
 ---
 
-## 🌙 Feature JavaScript: Tema Claro/Escuro (Global)
+## Uso do Feature JavaScript: Tema Claro/Escuro 
 
-### 📌 O que a feature faz
+### O que a feature faz
 Permite ao utilizador alternar entre o tema claro (Light Mode) e o tema escuro (Dark Mode) através de um botão presente no cabeçalho. A escolha do tema é aplicada globalmente em **todas as páginas do site** e é mantida após recarregar a página (F5) ou reabrir o navegador.
 
-### 💾 Dados Persistidos no `localStorage`
+### Dados Persistidos no `localStorage`
 - **Chave (`Key`):** `theme`
 - **Valores (`Value`):** `"dark"` ou `"light"`
 
-### 🧪 Como Testar no DevTools
+### Como Testar no DevTools
 1. Abre qualquer página do site no navegador.
 2. Clica no botão de alternar tema no cabeçalho.
 3. Abre as Ferramentas do Desenvolvedor pressionando `F12` (ou clica com o botão direito -> **Inspecionar**).
@@ -31,11 +31,13 @@ Permite ao utilizador alternar entre o tema claro (Light Mode) e o tema escuro (
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 - HTML5 Semântico
 - CSS3 (Flexbox/Grid)
 - JavaScript (ES6+ / Web Storage API)
 - Git & GitHub
 
-## 👤 Autor
+## Autor
 **Juan Camilo** — Estudante de Análise e Desenvolvimento de Sistemas (ADS).
+Link do Projeto: 
+
