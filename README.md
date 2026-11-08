@@ -1,4 +1,4 @@
-Portfólio Pessoal 
+# Portfólio Pessoal # 
 
 Projeto de portfólio web desenvolvido para a disciplina de Desenvolvimento Front-End para Web no Centro Universitário Braz Cubas.
 
@@ -32,12 +32,12 @@ Permite ao utilizador alternar entre o tema claro (Light Mode) e o tema escuro (
 ---
 
 ## Tecnologias Utilizadas
-- HTML5 Semântico
-- CSS3 (Flexbox/Grid)
-- JavaScript (ES6+ / Web Storage API)
-- Git & GitHub
+- HTML 
+- CSS3 
+- JavaScript 
+
 
 ## Autor
-**Juan Camilo** — Estudante de Análise e Desenvolvimento de Sistemas (ADS).
+**Juan Camilo** — Estudante do 2º Semestre - Análise e Desenvolvimento de Sistemas (ADS).
 Link do Projeto: 
 
