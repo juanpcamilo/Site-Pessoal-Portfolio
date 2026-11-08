@@ -1,4 +1,4 @@
-# Portfólio Pessoal - Checkpoint 3 (CP3)
+# Portfólio Pessoal 
 
 Projeto de portfólio web desenvolvido para a disciplina de Desenvolvimento Front-End para Web no Centro Universitário Braz Cubas.
 
