@@ -1,0 +1,121 @@
+<!DOCTYPE html> <!--INSERIR DECLARAR O DOCUMENTO HTML 5-->
+<html lang="pt-br"> <!-- DEFINIR A RAIZ E O IDIOMA DA PÁGINA-->
+
+<head> <!-- AGRUPA OS META DADOS E O TÍTULO DA ABA -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Camilo</title> <!--TÍTULO ABA GUIA DA PÁGINA-->
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <script src="js/scripts.js" defer></script>
+</head> <!-- FECHAMENTO DOS META DADOS E O TÍTULO DA ABA -->
+
+<body> <!-- CORPO DA PÁGINA -->
+
+    <header class="cabecalho"> <!--CABEÇALHO DA PÁGINA INICIAL-->
+        <h1>JC</h1> <!--TÍTULO PRINCIPAL DA PÁGINA INICIAL-->
+
+        <nav class="menu-navegador-principal" aria-label="Menu principal">
+            <!-- INSERI CATEGORIAS DOS LINKS DE NAVEGAÇÃO DO CABEÇALHO DO MENU PRINCIPAL-->
+            <ul> <!--LISTA COM MARCADORES-->
+                <!--USO DO href PARA INDICAR UMA SEÇÃO DA MESMA PÁGINA E # PARA MARCAR O ID-->
+                <li><a href="index.html">Início</a></li>
+                <li><a href="curriculo.html">Currículo</a></li>
+                <li><a href="formulario.html">Formulário</a></li>
+                <li><a href="multimidia.html">Multimídia</a></li>
+                <li><a href="graficos.html">Gráficos</a></li>
+            </ul>
+        </nav> <!-- FECHAMENTO DA NAVEGAÇÃO DO MENU -->
+    </header> <!--FECHAMENTO DO CABEÇALHO DA PÁGINA INICIAL -->
+
+    <main class="conteudo-pagina-menu pagina-inicio"> <!-- CONTEÚDO DA PÁGINA INICIAL DO MENU -->
+        <!-- CARD DO TÍTULO DA PÁGINA OLÁ, BEM-VINDO(A)-->
+        <section class="card-titulo">
+            <!-- O JS troca este texto por "Olá, [nome]!" quando já existe um nome salvo -->
+            <h2 id="titulo-boas-vindas">Olá, bem-vindo(a)!</h2>
+
+            <!-- BOAS-VINDAS: aparece só na primeira visita (o JS esconde depois) -->
+            <form id="form-nome" class="form-linha" novalidate>
+                <label for="campo-nome">Qual é o seu nome?</label>
+                <div class="linha-campo">
+                    <input type="text" id="campo-nome" name="nome" maxlength="40" autocomplete="given-name"
+                        aria-describedby="erro-nome">
+                    <button type="submit" class="btn">Entrar</button>
+                </div>
+                <p id="erro-nome" class="erro" role="alert"></p>
+            </form>
+            <button type="button" id="btn-trocar-nome" class="btn btn-secundario" hidden>Não sou eu / trocar
+                nome</button>
+        </section>
+        <div class="sobre-interesses">
+
+            <div class="card-inicio section-quadro-foto">
+
+                <figure>
+                    <img src="img/foto_juan.jpg"
+                        alt="Foto de Juan Camilo, estudante do 2º semestre de Análise e Desenvolvimento de Sistemas">
+                    <!--LEGENDA DA FOTO-->
+                    <figcaption>
+                        <p>Juan Camilo, estudante do 2º semestre de Análise e Desenvolvimento de Sistemas.</p>
+                    </figcaption>
+                </figure>
+
+            </div>
+            <!--CARD SOBRE O JUAN-->
+            <div class="card-inicio section-quem-so-eu">
+                <h3>Sobre o Juan</h3>
+
+                <p>Olá! Me chamo Juan Camilo, sou <strong>jornalista</strong> e desenvolvedor em formação. Após um
+                    período escrevendo e
+                    trabalhando como <strong>redator web</strong> para o <strong>LAB Dicas Jornalismo, Futebol na Veia e
+                        Rádio Poliesportiva</strong>, na editoria de esportes para portais colaborativos, decidi
+                    mergulhar no mundo da
+                    programação para conectar minha bagagem em comunicação com a tecnologia.
+                    Meu objetivo é desenvolver soluções alinhadas às tendências do mercado e à Indústria 4.0. Quero
+                    criar plataformas e ferramentas que otimizem o trabalho jornalístico — seja no tratamento de dados
+                    ou em recursos multimídia —, além de aprimorar a experiência dos leitores, que buscam informações de
+                    forma rápida, com interfaces mais legíveis, interativas
+                    e responsivas para mobile e desktop.
+
+                    Fora do código, gosto de futebol, videogames, filmes, séries, além de estudar história e ter uma
+                    grande paixão por conhecer novos países e culturas.
+
+                    Por fim, busco absorver o máximo da lógica de programação e evoluir minhas habilidades técnicas para
+                    impactar
+                    positivamente o mercado de desenvolvimento de sistemas.
+                </p> <!-- FECHAMENTO DO PARÁGRAFO SOBRE MIM NO CARD-->
+
+            </div>
+
+        </div>
+
+        <!-- LISTA DE INTERESSES: o visitante adiciona itens e eles ficam salvos no localStorage -->
+        <section class="card-interesses" aria-labelledby="titulo-interesses">
+            <h2 id="titulo-interesses">Seus interesses</h2>
+            <p>Adicione assuntos que você gosta. A lista fica salva neste navegador.</p>
+
+            <form id="form-interesse" class="form-linha" novalidate>
+                <label for="campo-interesse">Novo interesse</label>
+                <div class="linha-campo">
+                    <input type="text" id="campo-interesse" name="interesse" maxlength="40"
+                        aria-describedby="erro-interesse">
+                    <button type="submit" class="btn">Adicionar</button>
+                </div>
+                <p id="erro-interesse" class="erro" role="alert"></p>
+            </form>
+
+            <p id="lista-vazia" class="vazio">Nenhum interesse adicionado ainda.</p>
+            <ul id="lista-interesses" class="lista-interesses"></ul>
+        </section>
+
+    </main> <!-- FECHAMENTO DO CONTEÚDO DA PÁGINA INICIAL DO MENU -->
+
+    <footer class="footer"> <!-- ABERTURA DO RODAPÉ DA PÁGINA INICIAL-->
+        <p class="footer-text">Trabalho Individual - Site Pessoal / Portfólio - Desenvolvimento Front-end para Web.</p>
+        <!--TEXTO DO RODAPÉ -->
+    </footer> <!-- FECHAMENTO DO RODAPÉ DA PÁGINA INICIAL -->
+
+</body> <!-- FECHAMENTO DO CORPO DA PÁGINA -->
+
+</html>

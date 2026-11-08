@@ -1,0 +1,1048 @@
+* CONFIGURAÇÃO GERAL*/ html {
+    /* DEFINE A FONTA PRINCIPAL DA PÁGINA */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* FAZ O TAMANHO DOS ELEMENTOS      elementos considerar borda e padding */
+    box-sizing: border-box;
+}
+
+/* Aplica o box-sizing para todos os elementos */
+*,
+*:before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* CONFIGURAÇÃO DOS CARDS - TÍTULO DO MULTIMÍDIA E CURRÍCULO */
+.card-titulo {
+    /* Centraliza o texto */
+    text-align: center;
+}
+
+/* CORPO DA PÁGINA INICIAL - INDEX */
+body {
+    /* Cor de fundo da página */
+    background-color: hsla(203, 47%, 21%, 0.568);
+
+    /* Fonte usada na página */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Organiza os elementos em coluna */
+    display: flex;
+    flex-direction: column;
+
+    /* Faz a página ocupar pelo menos a altura da tela */
+    min-height: 100vh;
+
+    /* Remove os espaços padrão do navegador */
+    margin: 0;
+    padding: 0;
+
+    /* Espaçamento entre as linhas */
+    line-height: 1.6;
+}
+
+
+/* CABEÇALHO */
+header {
+    /* Ativa o Flexbox */
+    display: flex;
+
+    /* Permite quebrar os elementos para outra linha */
+    flex-wrap: wrap;
+
+    /* Alinha os elementos no centro */
+    align-items: center;
+
+    /* Coloca espaço entre os elementos */
+    justify-content: space-between;
+
+    /* Cor preta do cabeçalho */
+    background-color: rgb(0, 0, 0);
+
+    /* Espaçamento interno */
+    padding: 10px 40px;
+}
+
+/* Título que fica dentro do cabeçalho */
+header h1 {
+    width: 60px;
+
+    /* Centraliza o texto */
+    text-align: center;
+
+    /* Cor do texto */
+    color: rgb(5, 11, 15);
+
+    /* Cor de fundo do título */
+    background-color: rgb(243, 243, 245);
+}
+
+
+/* CONFIGURAÇÃO DOS TEXTOS */
+
+/* Configuração dos parágrafos */
+p {
+    /* Deixa o texto justificado */
+    text-align: justify;
+
+    /* Tamanho da fonte do texto da foto*/
+    font-size: medium;
+}
+
+/* Configuração dos títulos h2 */
+h2 {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 254, 253);
+}
+
+/* Configuração dos títulos h3 */
+h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Centraliza o título */
+    text-align: center;
+    font-size: 16px;
+}
+
+
+/* CONFIGURAÇÃO DAS SEÇÕES */
+
+/* Estilo geral das seções */
+section {
+    /* Remove a borda */
+    border: none;
+
+    /* Espaçamento interno (mobile; aumenta na media query) */
+    padding: 20px;
+
+    /* Cor de fundo branca */
+    background-color: #fff;
+
+    /* Arredonda os cantos */
+    border-radius: 20px;
+
+    /* Cria uma sombra no card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título dentro das seções */
+section h2 {
+    /* Cor preta */
+    color: #000000;
+
+    /* Linha embaixo do título */
+    border-bottom: 3px solid #000000;
+
+    /* Espaço entre o texto e a linha */
+    padding-bottom: 5px;
+
+    /* Faz a linha ficar apenas no tamanho do texto */
+    display: inline-block;
+}
+
+
+/* IMAGENS E VÍDEOS */
+
+/* Faz a imagem e o vídeo não passarem do tamanho do card */
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* MENU DE NAVEGAÇÃO */
+
+/* Configuração da lista do menu */
+nav ul {
+    /* Coloca os itens lado a lado */
+    display: flex;
+
+    /* Permite quebrar linha em telas menores */
+    flex-wrap: wrap;
+
+    /* Remove as bolinhas da lista */
+    list-style: none;
+
+    /* Espaço entre os itens */
+    gap: 15px;
+
+    margin: 0;
+    padding: 0;
+
+    /* CENTRALIZAÇÃO DOS ITENS */
+    justify-content: center;
+}
+
+/* LINKS DO MENU */
+nav ul li a {
+    /*EXCLUI O SUBLLNHADO */
+    text-decoration: none;
+
+    /* COR BRANCA */
+    color: white;
+
+    /* DEIXA A LETRA MAIS FORTE */
+    font-weight: 500;
+
+    /* COR DO FUNDO */
+    background-color: rgb(17, 17, 17);
+
+    /* ÁREA DE TOQUE MÍNIMA POR */
+    min-height: 44px;
+
+    /* ESPAÇAMENTO ENTRE OS BOTÕES */
+    padding: 12px 16px;
+
+    /* ARREDONDA OS CANTOS */
+    border-radius: 6px;
+
+    /*A COR FICA MAIS CLARA QUANDO PASSA O MENU */
+    transition: background-color 0.2s ease;
+}
+
+
+/* EFEITO QUANDO PASSA O MOUSE NOS CAPÍTULOS (CURRÍCULO/FORMULÁRIO/MULTIMÍDIA/GRÁFICOS */
+
+/* Muda a cor do botão quando passa o mouse */
+nav ul li a:hover {
+    background-color: rgba(71, 130, 197, 0.548);
+}
+
+/* Mostra uma borda quando o link está selecionado */
+a:focus {
+    outline: 4px solid rgba(236, 242, 247, 0.66);
+    outline-offset: 2px;
+}
+
+/* Mostra uma borda quando a seção está selecionada */
+section:focus {
+    outline: 2px solid #d4d4d4;
+    outline-offset: 2px;
+}
+
+
+/* CONTEÚDO PRINCIPAL DA PÁGINA INICIAL - INDEX */
+
+main {
+    /* Organiza os elementos em coluna */
+    display: flex;
+    flex-direction: column;
+
+    /* Faz o main ocupar o espaço disponível */
+    flex: 1;
+
+    /* Espaço entre os elementos */
+    gap: 30px;
+
+    /* Centraliza os elementos */
+    align-items: center;
+
+    /* Largura máxima */
+    max-width: 900px;
+
+    width: 100%;
+
+    /* Centraliza o conteúdo */
+    margin: 20px auto;
+
+    /* Espaço nas laterais */
+    padding: 0 16px;
+}
+
+/* Deixa a página inicial um pouco mais larga (classe no main do index) */
+.pagina-inicio {
+    max-width: 1100px;
+}
+
+/* Faz as sections ocuparem toda a largura */
+main section {
+    width: 100%;
+}
+
+
+/* CONFIGURAÇÃO DOS CARDS */
+
+.cards {
+    /* Usa Grid para organizar os cards */
+    display: grid;
+
+    /* No celular fica apenas uma coluna */
+    grid-template-columns: 1fr;
+
+    /* Espaço entre os cards */
+    gap: 20px;
+
+    /* Remove fundo e sombra */
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+
+
+/* RODAPÉ */
+
+footer {
+    /* Fundo preto */
+    background-color: black;
+
+    /* Ocupa toda a largura */
+    width: 100%;
+
+    /* Centraliza o texto */
+    text-align: center;
+
+    /* Deixa o rodapé no final da página */
+    margin-top: auto;
+
+    /* Texto branco */
+    color: white;
+
+    padding: 0;
+}
+
+/* Texto do rodapé */
+footer p {
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* PÁGINA INICIAL - INDEX */
+
+/* CONTAINER DOS DOIS CARDS */
+.sobre-interesses {
+    /* Usa Flexbox */
+    display: flex;
+
+    /* No celular os cards ficam um embaixo do outro */
+    flex-direction: column;
+
+    /* Faz os cards ocuparem o espaço disponível */
+    align-items: stretch;
+
+    /* Centraliza os cards */
+    justify-content: center;
+
+    /* Espaço entre os cards */
+    gap: 30px;
+
+    width: 100%;
+}
+
+
+/* ESTILO DOS DOIS CARDS */
+.card-inicio {
+    /* Define como o card vai ocupar o espaço */
+    flex: 3 3 0;
+
+    /* Largura máxima */
+    max-width: 380px;
+
+    /* Espaço dentro do card */
+    padding: 24px;
+
+    /* Arredonda os cantos */
+    border-radius: 8px;
+
+    /* Sombra do card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tamanho do texto dos cards */
+.card-inicio p {
+    font-size: 1rem;
+}
+
+/* CARD 1 - FOTO */
+
+.section-quadro-foto {
+    /* Fundo branco */
+    background-color: #ffffff;
+
+    /* Mobile: o card ocupa a largura disponível (coluna) */
+    flex: 0 1 auto;
+}
+
+/* Remove a margem da figura */
+.section-quadro-foto figure {
+    margin: 0;
+}
+
+/* Configuração da imagem */
+.section-quadro-foto img {
+    /* Ocupa toda a largura do card */
+    width: 100%;
+
+    /* Mantém a proporção da imagem */
+    height: auto;
+
+    /* Faz a imagem ficar como bloco */
+    display: block;
+}
+
+/* Legenda da foto */
+.section-quadro-foto figcaption {
+    margin-top: 4px;
+    font-size: 0.72rem;
+    text-align: center;
+}
+
+
+/* CARD 2 - QUEM SOU EU */
+
+.section-quem-so-eu {
+    /* Fundo branco */
+    background-color: white;
+    /* Usa Flexbox */
+    display: flex;
+    flex-direction: column;
+    /* Centraliza o conteúdo */
+    justify-content: center;
+    flex: 1 1 0;
+    max-width: none;
+    padding: 30px 40px;
+    border-radius: 10px;
+    /* Centraliza o texto */
+    text-align: center;
+}
+
+/* Título do card */
+.section-quem-so-eu h3 {
+    /* Remove o espaço de cima */
+    margin-top: 0;
+
+    /* Tamanho do título */
+    font-size: 1.6rem;
+}
+
+/* Texto do card */
+.section-quem-so-eu p {
+    text-align: justify;
+    font-size: 1rem;
+
+    /* Espaçamento entre as linhas */
+    line-height: 1.5;
+}
+
+
+/* PÁGINA CURRÍCULO */
+
+/* Deixa o texto do currículo preto */
+.card-curriculo,
+.card-curriculo h2 {
+    color: black;
+}
+
+/* Centraliza o nome */
+.card-nome h2 {
+    text-align: center;
+}
+
+/* Organiza os dados de contato */
+.card-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Centraliza o conteúdo */
+.card-projetos ul,
+.card-projetos table,
+.card-tecnologias,
+.card-nome {
+    text-align: center;
+
+    /* Remove os marcadores da lista */
+    list-style-type: none;
+}
+
+/* Centraliza o título */
+.card-tecnologias h4 {
+    text-align: center;
+}
+
+/* Centraliza o h2 */
+.card-tecnologias h2 {
+    text-align: center;
+}
+
+/* Faz o parágrafo ocupar toda a largura */
+.card-curriculo p {
+    width: 100%;
+}
+
+/* Centraliza os textos das tecnologias */
+.card-tecnologias h3,
+.card-tecnologias h4,
+.card-tecnologias p {
+    text-align: center;
+}
+
+/* Centraliza a tabela */
+.card-tecnologias table {
+    margin: 0 auto;
+
+    /* Mobile: fonte menor para a tabela caber sem rolagem lateral */
+    font-size: 0.8125rem;
+
+    /* Junta as bordas da tabela */
+    border-collapse: collapse;
+}
+
+/* Espaçamento das células da tabela */
+.card-tecnologias th,
+.card-tecnologias td {
+    padding: 8px 4px;
+    text-align: center;
+}
+
+
+/* PÁGINA MULTIMÍDIA */
+
+/* Configuração dos cards */
+.card {
+    background-color: rgb(223, 223, 223);
+
+    /* Espaçamento interno (mobile; aumenta na media query) */
+    padding: 20px;
+
+    /* Arredonda os cantos */
+    border-radius: 20px;
+
+    /* Coloca uma sombra */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tira o espaço de cima do h3 */
+.card h3 {
+    margin-top: 0;
+}
+
+/* Remove a margem da mídia */
+.midia {
+    margin: 0;
+}
+
+/* Configuração dos vídeos e áudios */
+.midia video,
+.midia audio {
+    /* Ocupa toda a largura disponível */
+    width: 100%;
+
+    display: block;
+
+    /* Arredonda os cantos */
+    border-radius: 10px;
+}
+
+/* LEGENDA DOS TEXTOS DO CARD */
+
+.midia figcaption {
+    /* Espaço entre a mídia e a legenda */
+    margin-top: 15px;
+
+    font-size: 16px;
+
+    /* Centraliza a legenda */
+    text-align: center;
+}
+
+
+/* VÍDEO DO YOUTUBE */
+
+/* Container usado para deixar o vídeo responsivo */
+.video-container {
+    width: 100%;
+}
+
+/* Configuração do vídeo do YouTube */
+.video-container iframe {
+    width: 100%;
+
+    /* Mantém o formato 16:9 */
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 10px;
+}
+
+
+/* PÁGINA GRÁFICOS */
+
+/* Configuração do card do gráfico */
+.card-grafico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Título do gráfico */
+.card-grafico h3 {
+    margin-top: 0;
+}
+
+/* Faz o gráfico não passar do tamanho do card */
+.card-grafico svg {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* CONFIGURAÇÃO DO CANVAS */
+
+/* Configuração do canvas usado nos gráficos */
+canvas {
+    max-width: 100%;
+    /* borda*/
+    border: 1px solid #ccc;
+    /* Fundo branco */
+    background: #fff;
+}
+
+
+/* GRÁFICOS EM BARRAS */
+
+.barra {
+    /* Cor das barras */
+    fill: rgba(240, 59, 14, 0.34);
+    /* Faz a mudança ficar mais suave */
+    transition: fill 0.2s ease, transform 0.2s ease;
+    /* Define o ponto de origem da transformação */
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+/* Quando passar o mouse em cima da barra */
+.barra:hover {
+    /* Muda a cor */
+    fill: #2479d3;
+    /* Aumenta um pouco a barra */
+    transform: scaleY(1.03);
+}
+
+/* Texto dos nomes do gráfico */
+.rotulo {
+    font-size: 11px;
+    fill: #333;
+
+    /* Centraliza o texto */
+    text-anchor: middle;
+}
+
+/* Valores que aparecem no gráfico */
+.valor {
+    font-size: 11px;
+    fill: #333;
+    text-anchor: middle;
+
+    /* Deixa o valor em negrito */
+    font-weight: bold;
+}
+
+
+/* PÁGINA FORMULÁRIO */
+
+/* Tira o fundo preto do header que fica dentro do card */
+.cabecalho-form {
+    display: block;
+    background-color: transparent;
+    padding: 0;
+}
+
+/* Fieldset e botão em coluna, espaçados por gap */
+.form-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Tira a borda do fieldset */
+.form-card fieldset {
+    border: none;
+    padding: 0;
+
+    /* Campos em coluna, espaçados por gap */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+/* CADA CAMPO DO FORMULÁRIO */
+
+/* Coloca o label em cima e o campo embaixo */
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nome do campo */
+.campo label {
+    /* Deixa o texto em negrito */
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+
+/* CAMPOS DE INPUT, SELECT E TEXTAREA */
+
+.campo input,
+.campo select,
+.campo textarea {
+    /* Ocupa a largura do campo e pode encolher em telas estreitas */
+    width: 100%;
+
+    /* Espaço dentro do campo */
+    padding: 10px;
+
+    /* Tamanho da letra */
+    font-size: 1rem;
+
+    /* Cor e tamanho da borda */
+    border: 1px solid #767676;
+
+    /* Arredonda os cantos */
+    border-radius: 6px;
+}
+
+
+/* BOTÃO ENVIAR */
+
+.form-card button {
+    /* Ocupa toda a largura */
+    width: 100%;
+    /* Espaçamento interno */
+    padding: 12px;
+    /* Tamanho do texto */
+    font-size: 1rem;
+    /* Cor do texto */
+    color: white;
+    /* Cor do botão */
+    background-color: #111111;
+    /* Remove a borda */
+    border: none;
+    /* Arredonda os cantos */
+    border-radius: 6px;
+    /* Muda o cursor para mãozinha */
+    cursor: pointer;
+}
+
+/* EFEITO AO PASSAR O MOUSE NO BOTÃO */
+
+.form-card button:hover {
+    /* Muda a cor do botão */
+    background-color: rgba(71, 130, 197, 0.9);
+}
+
+
+/*MEDIA QUERIES - MOBILE FIRST*/
+
+@media (min-width: 768px) {
+
+    /* PÁGINA INICIAL - FOTO E TEXTO LADO A LADO */
+
+    .sobre-interesses {
+        /* Muda de coluna para linha */
+        flex-direction: row;
+    }
+
+    /* Foto: cresce e encolhe a partir de 280px (limite no .card-inicio) */
+    .section-quadro-foto {
+        flex: 1 1 280px;
+        align-self: flex-start;
+    }
+
+    /* PÁGINA MULTIMÍDIA - CARDS EM 2 COLUNAS */
+
+    .cards {
+        /* Divide os cards em duas colunas */
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Mais espaço interno quando há espaço na tela */
+    section,
+    .card {
+        padding: 30px;
+    }
+
+    /* Tabela do currículo com mais respiro */
+    .card-tecnologias table {
+        font-size: 1rem;
+    }
+
+    .card-tecnologias th,
+    .card-tecnologias td {
+        padding: 8px 20px;
+    }
+}
+
+/* ==========================================================
+   CP3 - JAVASCRIPT: tema, boas-vindas, interesses, formulário
+   ========================================================== */
+
+/* Garante que o atributo hidden esconda mesmo com display:flex em outras regras */
+[hidden] {
+    display: none !important;
+}
+
+/* Botão do tema (criado pelo JS dentro do header) */
+.btn-tema {
+    min-height: 44px;
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #111;
+    border: 1px solid #888;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-tema:hover {
+    background-color: rgba(71, 130, 197, 0.548);
+}
+
+/* Botões e campos usados nas features da página inicial */
+.btn {
+    min-height: 44px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    color: white;
+    background-color: #111111;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgba(71, 130, 197, 0.9);
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: inherit;
+    border: 1px solid currentColor;
+}
+
+.form-linha {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.form-linha label {
+    font-weight: bold;
+}
+
+.linha-campo {
+    display: flex;
+    gap: 8px;
+}
+
+.linha-campo input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #767676;
+    border-radius: 6px;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+    outline: 3px solid #2479d3;
+    outline-offset: 2px;
+}
+
+#btn-trocar-nome {
+    display: block;
+    margin: 12px auto 0;
+}
+
+/* Lista de interesses */
+.card-interesses {
+    text-align: center;
+}
+
+.card-interesses p {
+    text-align: center;
+}
+
+.lista-interesses {
+    list-style: none;
+    margin: 16px auto 0;
+    padding: 0;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.lista-interesses li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border: 1px solid #c9c9c9;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.lista-interesses button {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    color: inherit;
+    background: transparent;
+    border: 1px solid currentColor;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.vazio {
+    font-style: italic;
+}
+
+/* Mensagens de erro, aviso e sucesso (sempre visíveis na tela) */
+.erro {
+    margin: 0;
+    min-height: 1.2em;
+    font-size: 0.875rem;
+    color: #b00020;
+    text-align: left;
+}
+
+.campo input[aria-invalid="true"],
+.campo select[aria-invalid="true"],
+.campo textarea[aria-invalid="true"],
+.linha-campo input[aria-invalid="true"] {
+    border: 2px solid #b00020;
+}
+
+.aviso,
+.feedback {
+    margin: 0;
+    padding: 10px 14px;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.aviso {
+    background: #e3f2fd;
+    color: #0d3c61;
+}
+
+.feedback.sucesso {
+    background: #e8f5e9;
+    color: #1b5e20;
+}
+
+.feedback.falha {
+    background: #fdecea;
+    color: #8a0017;
+}
+
+
+/* ----------------------------------------------------------
+   TEMA ESCURO: ativado por <html data-tema="escuro">
+   (o tema claro é o visual original, sem atributo)
+   ---------------------------------------------------------- */
+html[data-tema="escuro"] body {
+    background-color: #0b1620;
+    color: #e6edf3;
+}
+
+html[data-tema="escuro"] section,
+html[data-tema="escuro"] .card,
+html[data-tema="escuro"] .card-inicio,
+html[data-tema="escuro"] .section-quem-so-eu,
+html[data-tema="escuro"] .section-quadro-foto {
+    background-color: #16293a;
+    color: #e6edf3;
+}
+
+html[data-tema="escuro"] section h2,
+html[data-tema="escuro"] .card-curriculo,
+html[data-tema="escuro"] .card-curriculo h2 {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+}
+
+html[data-tema="escuro"] .card-curriculo {
+    border-bottom: none;
+}
+
+html[data-tema="escuro"] main a {
+    color: #8ab4f8;
+}
+
+html[data-tema="escuro"] .campo input,
+html[data-tema="escuro"] .campo select,
+html[data-tema="escuro"] .campo textarea,
+html[data-tema="escuro"] .linha-campo input {
+    background-color: #0f1e2b;
+    color: #e6edf3;
+    border-color: #8aa0b3;
+}
+
+html[data-tema="escuro"] .btn,
+html[data-tema="escuro"] .form-card button {
+    background-color: #2f6fb5;
+}
+
+html[data-tema="escuro"] .btn-secundario {
+    background-color: transparent;
+}
+
+html[data-tema="escuro"] .lista-interesses li {
+    border-color: #3b5368;
+}
+
+html[data-tema="escuro"] .rotulo,
+html[data-tema="escuro"] .valor {
+    fill: #e6edf3;
+}
+
+html[data-tema="escuro"] .erro {
+    color: #ff8a80;
+}
+
+html[data-tema="escuro"] .campo input[aria-invalid="true"],
+html[data-tema="escuro"] .campo select[aria-invalid="true"],
+html[data-tema="escuro"] .campo textarea[aria-invalid="true"],
+html[data-tema="escuro"] .linha-campo input[aria-invalid="true"] {
+    border-color: #ff8a80;
+}
+
+html[data-tema="escuro"] .aviso {
+    background: #0f2f4a;
+    color: #bfe0ff;
+}
+
+html[data-tema="escuro"] .feedback.sucesso {
+    background: #12351f;
+    color: #b9f6ca;
+}
+
+html[data-tema="escuro"] .feedback.falha {
+    background: #3d1218;
+    color: #ffb4ab;
+}
+
+@media (max-width: 480px) {
+    .linha-campo {
+        flex-direction: column;
+    }
+}
