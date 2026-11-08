@@ -1,6 +1,6 @@
 # Portfólio Pessoal # 
 
-Projeto de portfólio web desenvolvido para a disciplina de Desenvolvimento Front-End para Web no Centro Universitário Braz Cubas.
+Projeto de portfólio web desenvolvido para a disciplina de Desenvolvimento Front-End para Web do 2º Semestre de Análise e Desenvolvimento de Sistemas no Centro Universitário Braz Cubas.
 
 ##  Estrutura do Site
 - `index.html`: Página inicial com apresentação e navegação principal.
