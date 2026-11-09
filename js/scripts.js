@@ -72,12 +72,10 @@ function iniciarTema() {
 
     function aplicar() {
         // O CSS reage ao atributo data-tema do <html>
-        if (tema === 'escuro') {
-            document.documentElement.setAttribute('data-tema', 'escuro');
-        } else {
-            document.documentElement.removeAttribute('data-tema');
+        function aplicar() {
+            document.body.classList.toggle('tema-escuro', tema === 'escuro');
+            botao.textContent = tema === 'escuro' ? 'Ativar tema claro' : 'Ativar tema escuro';
         }
-        botao.textContent = tema === 'escuro' ? 'Ativar tema claro' : 'Ativar tema escuro';
     }
 
     botao.addEventListener('click', () => {
