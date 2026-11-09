@@ -1,14 +1,4 @@
-/* ==========================================================
-   scripts.js - CP3
-   Features com localStorage:
-     1) Tema claro/escuro        (todas as páginas)
-     2) Boas-vindas com nome     (index.html)
-     3) Lista de interesses      (index.html)
-     4) Rascunho + validação     (formulario.html)
 
-   O mesmo arquivo é carregado nas 5 páginas, por isso cada
-   função confere se os elementos dela existem antes de agir.
-   ========================================================== */
 'use strict';
 
 /* ---------- Chaves usadas no localStorage ---------- */
@@ -56,7 +46,7 @@ function mostrarErro(campo, areaErro, mensagem) {
 
 
 /* ==========================================================
-   1) TEMA CLARO / ESCURO
+   TEMA CLARO / ESCURO
    ========================================================== */
 function iniciarTema() {
     const cabecalho = document.querySelector('header.cabecalho');
@@ -71,11 +61,9 @@ function iniciarTema() {
     cabecalho.appendChild(botao);
 
     function aplicar() {
-        // O CSS reage ao atributo data-tema do <html>
-        function aplicar() {
-            document.body.classList.toggle('tema-escuro', tema === 'escuro');
-            botao.textContent = tema === 'escuro' ? 'Ativar tema claro' : 'Ativar tema escuro';
-        }
+        // O CSS reage à classe tema-escuro no <body> (body.tema-escuro)
+        document.body.classList.toggle('tema-escuro', tema === 'escuro');
+        botao.textContent = tema === 'escuro' ? 'Ativar tema claro' : 'Ativar tema escuro';
     }
 
     botao.addEventListener('click', () => {
@@ -138,7 +126,7 @@ function iniciarBoasVindas() {
 
 
 /* ==========================================================
-   3) LISTA DE INTERESSES
+    LISTA DE INTERESSES
    ========================================================== */
 function iniciarInteresses() {
     const formulario = document.getElementById('form-interesse');
@@ -227,7 +215,7 @@ function iniciarInteresses() {
 
 
 /* ==========================================================
-   4) FORMULÁRIO: validação + rascunho
+   FORMULÁRIO: validação + rascunho
    ========================================================== */
 function iniciarFormulario() {
     const formulario = document.getElementById('form-contato');
