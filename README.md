@@ -21,19 +21,19 @@ Permite ao utilizador alternar entre o tema claro (Light Mode) e o tema escuro (
 - **Valores (`Value`):** `"dark"` ou `"light"`
 
 ### Como Testar no DevTools
-1. Abre qualquer página do site no navegador.
-2. Clica no botão de alternar tema no cabeçalho.
-3. Abre as Ferramentas do Desenvolvedor pressionando `F12` (ou clica com o botão direito -> **Inspecionar**).
-4. Navega até a aba **Application** (ou **Aplicação**).
-5. No menu lateral esquerdo, expande **Local Storage** e seleciona o endereço do site.
-6. Verifica o par Chave/Valor: `theme` com o valor `dark` ou `light`.
-7. Recarrega a página (`F5`) ou navega entre as outras 5 páginas do site para confirmar que o tema selecionado e o valor no `localStorage` permanecem salvos.
+Abre qualquer página do site no navegador.
+Clica no botão de alternar tema no cabeçalho.
+Abre as Ferramentas do Desenvolvedor pressionando `F12` (ou clica com o botão direito -> **Inspecionar**).
+Navega até a aba **Application** (ou **Aplicação**).
+No menu lateral esquerdo, expande **Local Storage** e seleciona o endereço do site.
+Verifica o par Chave/Valor: `theme` com o valor `dark` ou `light`.
+Recarrega a página (`F5`) ou navega entre as outras 5 páginas do site para confirmar que o tema selecionado e o valor no `localStorage` permanecem salvos.
 
 ---
 
 ## Tecnologias Utilizadas
 - HTML 
-- CSS3 
+- CSS
 - JavaScript 
 
 
