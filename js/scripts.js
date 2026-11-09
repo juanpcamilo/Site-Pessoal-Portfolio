@@ -1,4 +1,6 @@
-
+/* O mesmo arquivo é carregado nas 5 páginas, por isso cada
+   função confere se os elementos dela existem antes de agir.
+   ========================================================== */
 'use strict';
 
 /* ---------- Chaves usadas no localStorage ---------- */
@@ -46,7 +48,7 @@ function mostrarErro(campo, areaErro, mensagem) {
 
 
 /* ==========================================================
-   TEMA CLARO / ESCURO
+    TEMA CLARO / ESCURO
    ========================================================== */
 function iniciarTema() {
     const cabecalho = document.querySelector('header.cabecalho');
@@ -61,7 +63,7 @@ function iniciarTema() {
     cabecalho.appendChild(botao);
 
     function aplicar() {
-        // O CSS reage à classe tema-escuro no <body> (body.tema-escuro)
+        // O CSS reage à classe tema-escuro no <body>
         document.body.classList.toggle('tema-escuro', tema === 'escuro');
         botao.textContent = tema === 'escuro' ? 'Ativar tema claro' : 'Ativar tema escuro';
     }
@@ -76,7 +78,9 @@ function iniciarTema() {
 }
 
 
-/*BOAS-VINDAS */
+/* ==========================================================
+   BOAS-VINDAS
+   ========================================================== */
 function iniciarBoasVindas() {
     const titulo = document.getElementById('titulo-boas-vindas');
     const formulario = document.getElementById('form-nome');
@@ -214,7 +218,7 @@ function iniciarInteresses() {
 }
 
 
-/* ==========================================================
+/* =========================================================
    FORMULÁRIO: validação + rascunho
    ========================================================== */
 function iniciarFormulario() {

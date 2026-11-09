@@ -795,7 +795,7 @@ canvas {
         font-size: 1rem;
     }
 
-    .card-tecnologias th,sss
+    .card-tecnologias th,
     .card-tecnologias td {
         padding: 8px 20px;
     }
@@ -817,7 +817,7 @@ canvas {
 }
 
 .btn-tema:hover {
-    background-color: rgba(234, 242, 243, 0.774);
+    background-color: #a85a0e;
 }
 
 /* Botões e campos usados nas features da página inicial */
