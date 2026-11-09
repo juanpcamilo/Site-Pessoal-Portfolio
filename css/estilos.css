@@ -1,8 +1,9 @@
-* CONFIGURAÇÃO GERAL*/ html {
+/* CONFIGURAÇÃO GERAL */
+html {
     /* DEFINE A FONTA PRINCIPAL DA PÁGINA */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-    /* FAZ O TAMANHO DOS ELEMENTOS      elementos considerar borda e padding */
+    /* FAZ O TAMANHO DOS ELEMENTOS - elementos considerar borda e padding */
     box-sizing: border-box;
 }
 
@@ -22,7 +23,7 @@
 /* CORPO DA PÁGINA INICIAL - INDEX */
 body {
     /* Cor de fundo da página */
-    background-color: hsla(203, 47%, 21%, 0.568);
+    background-color: hsl(180, 1%, 73%);
 
     /* Fonte usada na página */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -209,7 +210,7 @@ nav ul li a {
 
 /* Muda a cor do botão quando passa o mouse */
 nav ul li a:hover {
-    background-color: rgba(71, 130, 197, 0.548);
+    background-color: rgba(243, 243, 243, 0.795);
 }
 
 /* Mostra uma borda quando o link está selecionado */
@@ -657,35 +658,42 @@ canvas {
     padding: 0;
 }
 
-/* Fieldset e botão em coluna, espaçados por gap */
+/* Layout em bloco comum: cada elemento ocupa a largura do card,
+   um embaixo do outro (sem flexbox aqui, para o tamanho ser previsível) */
 .form-card form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    display: block;
 }
 
 /* Tira a borda do fieldset */
 .form-card fieldset {
     border: none;
     padding: 0;
+    margin: 0;
 
-    /* Campos em coluna, espaçados por gap */
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    /* O fieldset tem largura minima propria; sem isto ele pode ficar
+       mais largo que o card e empurrar os campos para fora */
+    min-width: 0;
+}
+
+/* Espaço entre os blocos do formulário */
+.form-card .aviso,
+.form-card .feedback {
+    margin: 0 0 15px 0;
 }
 
 
 /* CADA CAMPO DO FORMULÁRIO */
 
-/* Coloca o label em cima e o campo embaixo */
+/* O label fica em cima e o campo embaixo (cada um ocupa uma linha) */
 .campo {
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 15px;
 }
 
 /* Nome do campo */
 .campo label {
+    /* Ocupa a linha inteira, então o campo vai para baixo */
+    display: block;
+
     /* Deixa o texto em negrito */
     font-weight: bold;
     margin-bottom: 4px;
@@ -698,6 +706,7 @@ canvas {
 .campo select,
 .campo textarea {
     /* Ocupa a largura do campo e pode encolher em telas estreitas */
+    display: block;
     width: 100%;
 
     /* Espaço dentro do campo */
@@ -714,19 +723,27 @@ canvas {
 }
 
 
+/* Caixa de mensagem*/
+.campo textarea {
+    resize: vertical;
+    max-width: 100%;
+}
+
+
 /* BOTÃO ENVIAR */
 
 .form-card button {
     /* Ocupa toda a largura */
+    display: block;
     width: 100%;
     /* Espaçamento interno */
     padding: 12px;
     /* Tamanho do texto */
     font-size: 1rem;
     /* Cor do texto */
-    color: white;
+    color: rgb(253, 252, 252);
     /* Cor do botão */
-    background-color: #111111;
+    background-color: #7a7c06c0;
     /* Remove a borda */
     border: none;
     /* Arredonda os cantos */
@@ -739,7 +756,7 @@ canvas {
 
 .form-card button:hover {
     /* Muda a cor do botão */
-    background-color: rgba(71, 130, 197, 0.9);
+    background-color: rgba(46, 52, 100, 0.9);
 }
 
 
@@ -778,35 +795,29 @@ canvas {
         font-size: 1rem;
     }
 
-    .card-tecnologias th,
+    .card-tecnologias th,sss
     .card-tecnologias td {
         padding: 8px 20px;
     }
 }
 
 /* ==========================================================
-   CP3 - JAVASCRIPT: tema, boas-vindas, interesses, formulário
-   ========================================================== */
-
-/* Garante que o atributo hidden esconda mesmo com display:flex em outras regras */
-[hidden] {
-    display: none !important;
-}
+   CP3 - JAVASCRIPT: tema, boas-vindas, interesses, formulário 
 
 /* Botão do tema (criado pelo JS dentro do header) */
 .btn-tema {
     min-height: 44px;
     padding: 8px 14px;
     font-size: 0.9rem;
-    color: white;
-    background-color: #111;
-    border: 1px solid #888;
+    color: rgb(255, 254, 254);
+    background-color: #884608d8;
+    border: 1px solid #dddada;
     border-radius: 6px;
     cursor: pointer;
 }
 
 .btn-tema:hover {
-    background-color: rgba(71, 130, 197, 0.548);
+    background-color: rgba(234, 242, 243, 0.774);
 }
 
 /* Botões e campos usados nas features da página inicial */
@@ -822,7 +833,7 @@ canvas {
 }
 
 .btn:hover {
-    background-color: rgba(71, 130, 197, 0.9);
+    background-color: rgba(23, 28, 34, 0.9);
 }
 
 .btn-secundario {
@@ -846,6 +857,8 @@ canvas {
 
 .linha-campo {
     display: flex;
+    flex-direction: column;
+    /* mobile-first: empilhado */
     gap: 8px;
 }
 
@@ -858,15 +871,16 @@ canvas {
     border-radius: 6px;
 }
 
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible,
-button:focus-visible {
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
     outline: 3px solid #2479d3;
     outline-offset: 2px;
 }
 
-#btn-trocar-nome {
+.btn-secundario {
+    /* centraliza o botão "trocar nome" */
     display: block;
     margin: 12px auto 0;
 }
@@ -920,15 +934,15 @@ button:focus-visible {
     margin: 0;
     min-height: 1.2em;
     font-size: 0.875rem;
-    color: #b00020;
+    color: #8f011b;
     text-align: left;
 }
 
-.campo input[aria-invalid="true"],
-.campo select[aria-invalid="true"],
-.campo textarea[aria-invalid="true"],
-.linha-campo input[aria-invalid="true"] {
-    border: 2px solid #b00020;
+.campo input.invalido,
+.campo select.invalido,
+.campo textarea.invalido,
+.linha-campo input.invalido {
+    border: 2px solid #8f011b;
 }
 
 .aviso,
@@ -956,93 +970,100 @@ button:focus-visible {
 
 
 /* ----------------------------------------------------------
-   TEMA ESCURO: ativado por <html data-tema="escuro">
-   (o tema claro é o visual original, sem atributo)
+   TEMA ESCURO: ativado pela classe tema-escuro no <body> 
    ---------------------------------------------------------- */
-html[data-tema="escuro"] body {
+body.tema-escuro {
     background-color: #0b1620;
     color: #e6edf3;
 }
 
-html[data-tema="escuro"] section,
-html[data-tema="escuro"] .card,
-html[data-tema="escuro"] .card-inicio,
-html[data-tema="escuro"] .section-quem-so-eu,
-html[data-tema="escuro"] .section-quadro-foto {
+body.tema-escuro section,
+body.tema-escuro .card,
+body.tema-escuro .card-inicio,
+body.tema-escuro .section-quem-so-eu,
+body.tema-escuro .section-quadro-foto {
     background-color: #16293a;
     color: #e6edf3;
 }
 
-html[data-tema="escuro"] section h2,
-html[data-tema="escuro"] .card-curriculo,
-html[data-tema="escuro"] .card-curriculo h2 {
+body.tema-escuro section h2,
+body.tema-escuro .card-curriculo,
+body.tema-escuro .card-curriculo h2 {
     color: #ffffff;
     border-bottom-color: #ffffff;
 }
 
-html[data-tema="escuro"] .card-curriculo {
+body.tema-escuro .card-curriculo {
     border-bottom: none;
 }
 
-html[data-tema="escuro"] main a {
+body.tema-escuro main a {
     color: #8ab4f8;
 }
 
-html[data-tema="escuro"] .campo input,
-html[data-tema="escuro"] .campo select,
-html[data-tema="escuro"] .campo textarea,
-html[data-tema="escuro"] .linha-campo input {
+body.tema-escuro .campo input,
+body.tema-escuro .campo select,
+body.tema-escuro .campo textarea,
+body.tema-escuro .linha-campo input {
     background-color: #0f1e2b;
     color: #e6edf3;
     border-color: #8aa0b3;
 }
 
-html[data-tema="escuro"] .btn,
-html[data-tema="escuro"] .form-card button {
+body.tema-escuro .btn,
+body.tema-escuro .form-card button {
     background-color: #2f6fb5;
 }
 
-html[data-tema="escuro"] .btn-secundario {
+body.tema-escuro .btn-secundario {
     background-color: transparent;
 }
 
-html[data-tema="escuro"] .lista-interesses li {
+body.tema-escuro .lista-interesses li {
     border-color: #3b5368;
 }
 
-html[data-tema="escuro"] .rotulo,
-html[data-tema="escuro"] .valor {
+body.tema-escuro .rotulo,
+body.tema-escuro .valor {
     fill: #e6edf3;
 }
 
-html[data-tema="escuro"] .erro {
+body.tema-escuro .erro {
     color: #ff8a80;
 }
 
-html[data-tema="escuro"] .campo input[aria-invalid="true"],
-html[data-tema="escuro"] .campo select[aria-invalid="true"],
-html[data-tema="escuro"] .campo textarea[aria-invalid="true"],
-html[data-tema="escuro"] .linha-campo input[aria-invalid="true"] {
+body.tema-escuro .campo input.invalido,
+body.tema-escuro .campo select.invalido,
+body.tema-escuro .campo textarea.invalido,
+body.tema-escuro .linha-campo input.invalido {
     border-color: #ff8a80;
 }
 
-html[data-tema="escuro"] .aviso {
+body.tema-escuro .aviso {
     background: #0f2f4a;
     color: #bfe0ff;
 }
 
-html[data-tema="escuro"] .feedback.sucesso {
+body.tema-escuro .feedback.sucesso {
     background: #12351f;
     color: #b9f6ca;
 }
 
-html[data-tema="escuro"] .feedback.falha {
+body.tema-escuro .feedback.falha {
     background: #3d1218;
-    color: #ffb4ab;
+    color: #d8847b;
 }
 
-@media (max-width: 480px) {
+/* Mobile-first: no celular o campo e o botao ficam empilhados;
+   a partir de 768px ficam lado a lado */
+@media (min-width: 768px) {
     .linha-campo {
-        flex-direction: column;
+        flex-direction: row;
     }
+}
+
+/* Esconde elementos (a classe e ligada/desligada pelo JS com classList).
+   Fica no fim do arquivo para vencer outras regras de display. */
+.oculto {
+    display: none;
 }
