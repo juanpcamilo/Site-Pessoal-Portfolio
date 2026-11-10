@@ -1151,3 +1151,8 @@ body.tema-escuro .feedback.falha {
 .oculto {
     display: none;
 }
+
+/* Garante que o atributo hidden esconda o elemento, mesmo com display definido no CSS */
+[hidden] {
+    display: none !important;
+}
