@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Camilo - Gráficos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <h1>JC</h1>
+
+        <nav class="menu-navegador-principal" aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="curriculo.html">Currículo</a></li>
+                <li><a href="formulario.html">Formulário</a></li>
+                <li><a href="multimidia.html">Multimídia</a></li>
+                <li><a href="graficos.html">Gráficos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- CARD DO TÍTULO DA PÁGINA !-->
+        <section class="card-grafico">
+            <h2>Desenho e Gráfico</h2>
+        </section>
+
+
+        <!-- DESENHO: CASA COM O SOL -->
+        <section class="card-grafico">
+            <h3>Desenho — Casa</h3>
+            <svg width="280" height="200" viewBox="0 0 280 200">
+                <!-- CÉU -->
+                <rect x="0" y="0" width="280" height="200" fill="#cdeeff" />
+
+                <!-- SOL -->
+                <circle cx="230" cy="40" r="25" fill="yellow" stroke="orange" stroke-width="3" />
+
+                <!-- CHÃO -->
+                <rect x="0" y="160" width="280" height="40" fill="#8bc34a" />
+
+                <!-- PAREDE DA CASA -->
+                <rect x="60" y="100" width="100" height="70" fill="lightblue" stroke="#333" stroke-width="2" />
+
+                <!-- TELHADO -->
+                <polygon points="50,100 110,60 170,100" fill="tomato" stroke="#333" stroke-width="2" />
+            </svg>
+        </section>
+
+        <!-- GRÁFICO: BARRAS EM SVG E ESTILIZADO COM CSS -->
+        <section class="card-grafico">
+            <h3>Maiores Campeões da Copa do Mundo!</h3>
+            <svg width="280" height="200" viewBox="0 0 280 200">
+                <!-- A LINHA DA BASE -->
+                <line x1="30" y1="170" x2="270" y2="170" stroke="#999" stroke-width="1" />
+
+                <!-- ALTURA DAS BARRAS -->
+                <rect class="barra" x="45" y="50" width="40" height="120" />
+                <rect class="barra" x="105" y="74" width="40" height="96" />
+                <rect class="barra" x="165" y="74" width="40" height="96" />
+                <rect class="barra" x="225" y="98" width="40" height="72" />
+
+                <!-- QUANTIDADE DE TÍTULOS EM CIMA DA BARRA -->
+                <text class="valor" x="65" y="43">5</text>
+                <text class="valor" x="125" y="67">4</text>
+                <text class="valor" x="185" y="67">4</text>
+                <text class="valor" x="245" y="91">3</text>
+
+                <!-- LEGENDA ABAIXO -->
+                <text class="rotulo" x="65" y="185">Brasil</text>
+                <text class="rotulo" x="125" y="185">Alemanha</text>
+                <text class="rotulo" x="185" y="185">Itália</text>
+                <text class="rotulo" x="245" y="185">Argentina</text>
+            </svg>
+        </section>
+
+    </main>
+    <!--RODAPÉ-->
+    <footer>
+        <p>Trabalho Individual - Site Pessoal / Portfólio - Desenvolvimento Front-end para Web.</p>
+    </footer>
+
+</body>
+
+</html>

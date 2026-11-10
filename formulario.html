@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Camilo - Formulário</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+
+<body>
+    <!-- CABEÇALHO DO SITE -->
+    <header class="cabecalho">
+        <h1>JC</h1>
+
+        <!-- MENU DE NAVEGAÇÃO -->
+        <nav class="menu-navegador-principal" aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="curriculo.html">Currículo</a></li>
+                <li><a href="formulario.html">Formulário</a></li>
+                <li><a href="multimidia.html">Multimídia</a></li>
+                <li><a href="graficos.html">Gráficos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL DO MENU -->
+    <main class="conteudo-pagina-menu">
+
+        <!-- CARD DO FORMULÁRIO -->
+        <section class="card form-card">
+
+            <!-- Título do card -->
+            <header class="cabecalho-form">
+                <h2>Contato</h2>
+                <p>Preencha os dados abaixo e eu retorno o contato.</p>
+            </header>
+
+            <!-- Formulário (novalidate: a validação é feita pelo nosso JS, com mensagens na tela) -->
+            <form id="form-contato" action="#" method="post" novalidate>
+
+                <!-- Avisos gerais (rascunho recuperado / erro / sucesso) -->
+                <p id="aviso-rascunho" class="aviso" role="status" hidden></p>
+
+                <fieldset>
+                    <legend>DADOS PARA CONTATO</legend>
+
+                    <div class="campo">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" autocomplete="name"
+                            aria-describedby="erro-form-nome">
+                        <p class="erro" id="erro-form-nome"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="nome@email.com" autocomplete="email"
+                            aria-describedby="erro-form-email">
+                        <p class="erro" id="erro-form-email"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="celular">Celular</label>
+                        <input type="tel" id="celular" name="celular" placeholder="(11) 91234-5678" autocomplete="tel"
+                            aria-describedby="erro-form-celular">
+                        <p class="erro" id="erro-form-celular"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="data">Data</label>
+                        <input type="date" id="data" name="data" aria-describedby="erro-form-data">
+                        <p class="erro" id="erro-form-data"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="assunto">Assunto</label>
+                        <select id="assunto" name="assunto" aria-describedby="erro-form-assunto">
+                            <option value="">Selecione...</option>
+                            <option value="proposta">Proposta</option>
+                            <option value="duvida">Dúvida</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                        <p class="erro" id="erro-form-assunto"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem"
+                            aria-describedby="erro-form-mensagem"></textarea>
+                        <p class="erro" id="erro-form-mensagem"></p>
+                    </div>
+                </fieldset>
+
+                <!-- Resultado do envio: aparece na tela, sem alert() -->
+                <p id="feedback-form" class="feedback" role="status" hidden></p>
+
+                <button type="submit">Enviar mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- RODAPÉ-->
+    <footer class="main-footer">
+        <p class="footer-text">Trabalho Individual - Site Pessoal / Portfólio - Desenvolvimento Front-end para Web.</p>
+    </footer>
+</body>
+
+</html>
