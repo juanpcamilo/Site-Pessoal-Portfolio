@@ -1,0 +1,1153 @@
+/* CONFIGURAÇÃO GERAL */
+html {
+    /* DEFINE A FONTA PRINCIPAL DA PÁGINA */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* FAZ O TAMANHO DOS ELEMENTOS - elementos considerar borda e padding */
+    box-sizing: border-box;
+}
+
+/* Aplica o box-sizing para todos os elementos */
+*,
+*:before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* CONFIGURAÇÃO DOS CARDS - TÍTULO DO MULTIMÍDIA E CURRÍCULO */
+.card-titulo {
+    /* Centraliza o texto */
+    text-align: center;
+}
+
+/* CORPO DA PÁGINA INICIAL - INDEX */
+body {
+    /* Cor de fundo da página */
+    background-color: hsl(180, 1%, 73%);
+
+    /* Fonte usada na página */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Organiza os elementos em coluna */
+    display: flex;
+    flex-direction: column;
+
+    /* Faz a página ocupar pelo menos a altura da tela */
+    min-height: 100vh;
+
+    /* Remove os espaços padrão do navegador */
+    margin: 0;
+    padding: 0;
+
+    /* Espaçamento entre as linhas */
+    line-height: 1.6;
+}
+
+
+/* CABEÇALHO */
+header {
+    /* Ativa o Flexbox */
+    display: flex;
+
+    /* Permite quebrar os elementos para outra linha */
+    flex-wrap: wrap;
+
+    /* Alinha os elementos no centro */
+    align-items: center;
+
+    /* Coloca espaço entre os elementos */
+    justify-content: space-between;
+
+    /* Cor preta do cabeçalho */
+    background-color: rgb(0, 0, 0);
+
+    /* Espaçamento interno */
+    padding: 10px 40px;
+}
+
+/* Título que fica dentro do cabeçalho */
+header h1 {
+    width: 60px;
+
+    /* Centraliza o texto */
+    text-align: center;
+
+    /* Cor do texto */
+    color: rgb(5, 11, 15);
+
+    /* Cor de fundo do título */
+    background-color: rgb(243, 243, 245);
+}
+
+
+/* CONFIGURAÇÃO DOS TEXTOS */
+
+/* Configuração dos parágrafos */
+p {
+    /* Deixa o texto justificado */
+    text-align: justify;
+
+    /* Tamanho da fonte do texto da foto*/
+    font-size: medium;
+}
+
+/* Configuração dos títulos h2 */
+h2 {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 254, 253);
+}
+
+/* Configuração dos títulos h3 */
+h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Centraliza o título */
+    text-align: center;
+    font-size: 16px;
+}
+
+
+/* CONFIGURAÇÃO DAS SEÇÕES */
+
+/* Estilo geral das seções */
+section {
+    /* Remove a borda */
+    border: none;
+
+    /* Espaçamento interno (mobile; aumenta na media query) */
+    padding: 20px;
+
+    /* Cor de fundo branca */
+    background-color: #fff;
+
+    /* Arredonda os cantos */
+    border-radius: 20px;
+
+    /* Cria uma sombra no card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título dentro das seções */
+section h2 {
+    /* Cor preta */
+    color: #000000;
+
+    /* Linha embaixo do título */
+    border-bottom: 3px solid #000000;
+
+    /* Espaço entre o texto e a linha */
+    padding-bottom: 5px;
+
+    /* Faz a linha ficar apenas no tamanho do texto */
+    display: inline-block;
+}
+
+
+/* IMAGENS E VÍDEOS */
+
+/* Faz a imagem e o vídeo não passarem do tamanho do card */
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* MENU DE NAVEGAÇÃO */
+
+/* Configuração da lista do menu */
+nav ul {
+    /* Coloca os itens lado a lado */
+    display: flex;
+
+    /* Permite quebrar linha em telas menores */
+    flex-wrap: wrap;
+
+    /* Remove as bolinhas da lista */
+    list-style: none;
+
+    /* Espaço entre os itens */
+    gap: 15px;
+
+    margin: 0;
+    padding: 0;
+
+    /* CENTRALIZAÇÃO DOS ITENS */
+    justify-content: center;
+}
+
+/* LINKS DO MENU */
+nav ul li a {
+    /*EXCLUI O SUBLLNHADO */
+    text-decoration: none;
+
+    /* COR BRANCA */
+    color: white;
+
+    /* DEIXA A LETRA MAIS FORTE */
+    font-weight: 500;
+
+    /* COR DO FUNDO */
+    background-color: rgb(17, 17, 17);
+
+    /* ÁREA DE TOQUE MÍNIMA POR */
+    min-height: 44px;
+
+    /* ESPAÇAMENTO ENTRE OS BOTÕES */
+    padding: 12px 16px;
+
+    /* ARREDONDA OS CANTOS */
+    border-radius: 6px;
+
+    /*A COR FICA MAIS CLARA QUANDO PASSA O MENU */
+    transition: background-color 0.2s ease;
+}
+
+
+/* EFEITO QUANDO PASSA O MOUSE NOS CAPÍTULOS (CURRÍCULO/FORMULÁRIO/MULTIMÍDIA/GRÁFICOS */
+
+/* Muda a cor do botão quando passa o mouse */
+nav ul li a:hover {
+    background-color: rgba(243, 243, 243, 0.795);
+}
+
+/* Mostra uma borda quando o link está selecionado */
+a:focus {
+    outline: 4px solid rgba(236, 242, 247, 0.66);
+    outline-offset: 2px;
+}
+
+/* Mostra uma borda quando a seção está selecionada */
+section:focus {
+    outline: 2px solid #d4d4d4;
+    outline-offset: 2px;
+}
+
+
+/* CONTEÚDO PRINCIPAL DA PÁGINA INICIAL - INDEX */
+
+main {
+    /* Organiza os elementos em coluna */
+    display: flex;
+    flex-direction: column;
+
+    /* Faz o main ocupar o espaço disponível */
+    flex: 1;
+
+    /* Espaço entre os elementos */
+    gap: 30px;
+
+    /* Centraliza os elementos */
+    align-items: center;
+
+    /* Largura máxima */
+    max-width: 900px;
+
+    width: 100%;
+
+    /* Centraliza o conteúdo */
+    margin: 20px auto;
+
+    /* Espaço nas laterais */
+    padding: 0 16px;
+}
+
+/* Deixa a página inicial um pouco mais larga (classe no main do index) */
+.pagina-inicio {
+    max-width: 1100px;
+}
+
+/* Faz as sections ocuparem toda a largura */
+main section {
+    width: 100%;
+}
+
+
+/* CONFIGURAÇÃO DOS CARDS */
+
+.cards {
+    /* Usa Grid para organizar os cards */
+    display: grid;
+
+    /* No celular fica apenas uma coluna */
+    grid-template-columns: 1fr;
+
+    /* Espaço entre os cards */
+    gap: 20px;
+
+    /* Remove fundo e sombra */
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+
+
+/* RODAPÉ */
+
+footer {
+    /* Fundo preto */
+    background-color: black;
+
+    /* Ocupa toda a largura */
+    width: 100%;
+
+    /* Centraliza o texto */
+    text-align: center;
+
+    /* Deixa o rodapé no final da página */
+    margin-top: auto;
+
+    /* Texto branco */
+    color: white;
+
+    padding: 0;
+}
+
+/* Texto do rodapé */
+footer p {
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* PÁGINA INICIAL - INDEX */
+
+/* CONTAINER DOS DOIS CARDS */
+.sobre-interesses {
+    /* Usa Flexbox */
+    display: flex;
+
+    /* No celular os cards ficam um embaixo do outro */
+    flex-direction: column;
+
+    /* Faz os cards ocuparem o espaço disponível */
+    align-items: stretch;
+
+    /* Centraliza os cards */
+    justify-content: center;
+
+    /* Espaço entre os cards */
+    gap: 30px;
+
+    width: 100%;
+}
+
+
+/* ESTILO DOS DOIS CARDS */
+.card-inicio {
+    /* Define como o card vai ocupar o espaço */
+    flex: 3 3 0;
+
+    /* Largura máxima */
+    max-width: 380px;
+
+    /* Espaço dentro do card */
+    padding: 24px;
+
+    /* Arredonda os cantos */
+    border-radius: 8px;
+
+    /* Sombra do card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tamanho do texto dos cards */
+.card-inicio p {
+    font-size: 1rem;
+}
+
+/* CARD 1 - FOTO */
+
+.section-quadro-foto {
+    /* Fundo branco */
+    background-color: #ffffff;
+
+    /* Mobile: o card ocupa a largura disponível (coluna) */
+    flex: 0 1 auto;
+}
+
+/* Remove a margem da figura */
+.section-quadro-foto figure {
+    margin: 0;
+}
+
+/* Configuração da imagem */
+.section-quadro-foto img {
+    /* Ocupa toda a largura do card */
+    width: 100%;
+
+    /* Mantém a proporção da imagem */
+    height: auto;
+
+    /* Faz a imagem ficar como bloco */
+    display: block;
+}
+
+/* Legenda da foto */
+.section-quadro-foto figcaption {
+    /* Espaço entre a foto e a legenda */
+    margin-top: 4px;
+
+    /* Letra pequena para a legenda */
+    font-size: 0.72rem;
+
+    /* Centraliza a legenda */
+    text-align: center;
+}
+
+
+/* CARD 2 - QUEM SOU EU */
+
+.section-quem-so-eu {
+    /* Fundo branco */
+    background-color: white;
+    /* Usa Flexbox */
+    display: flex;
+    flex-direction: column;
+    /* Centraliza o conteúdo */
+    justify-content: center;
+    /* Cresce para ocupar o espaço que sobra ao lado da foto */
+    flex: 1 1 0;
+    /* Remove o limite de largura herdado do .card-inicio */
+    max-width: none;
+    /* Espaço dentro do card (mais folgado nas laterais) */
+    padding: 30px 40px;
+    /* Arredonda os cantos */
+    border-radius: 10px;
+    /* Centraliza o texto */
+    text-align: center;
+}
+
+/* Título do card */
+.section-quem-so-eu h3 {
+    /* Remove o espaço de cima */
+    margin-top: 0;
+
+    /* Tamanho do título */
+    font-size: 1.6rem;
+}
+
+/* Texto do card */
+.section-quem-so-eu p {
+    text-align: justify;
+    font-size: 1rem;
+
+    /* Espaçamento entre as linhas */
+    line-height: 1.5;
+}
+
+
+/* PÁGINA CURRÍCULO */
+
+/* Deixa o texto do currículo preto */
+.card-curriculo,
+.card-curriculo h2 {
+    color: black;
+}
+
+/* Centraliza o nome */
+.card-nome h2 {
+    text-align: center;
+}
+
+/* Organiza os dados de contato */
+.card-contato {
+    /* Coloca os itens em coluna */
+    display: flex;
+    flex-direction: column;
+
+    /* Centraliza os itens na horizontal */
+    align-items: center;
+
+    /* Ocupa toda a largura do card */
+    width: 100%;
+}
+
+/* Centraliza o conteúdo */
+.card-projetos ul,
+.card-projetos table,
+.card-tecnologias,
+.card-nome {
+    text-align: center;
+
+    /* Remove os marcadores da lista */
+    list-style-type: none;
+}
+
+/* Centraliza o título */
+.card-tecnologias h4 {
+    text-align: center;
+}
+
+/* Centraliza o h2 */
+.card-tecnologias h2 {
+    text-align: center;
+}
+
+/* Faz o parágrafo ocupar toda a largura */
+.card-curriculo p {
+    width: 100%;
+}
+
+/* Centraliza os textos das tecnologias */
+.card-tecnologias h3,
+.card-tecnologias h4,
+.card-tecnologias p {
+    text-align: center;
+}
+
+/* Centraliza a tabela */
+.card-tecnologias table {
+    margin: 0 auto;
+
+    /* Mobile: fonte menor para a tabela caber sem rolagem lateral */
+    font-size: 0.8125rem;
+
+    /* Junta as bordas da tabela */
+    border-collapse: collapse;
+}
+
+/* Espaçamento das células da tabela */
+.card-tecnologias th,
+.card-tecnologias td {
+    padding: 8px 4px;
+    text-align: center;
+}
+
+
+/* PÁGINA MULTIMÍDIA */
+
+/* Configuração dos cards */
+.card {
+    background-color: rgb(223, 223, 223);
+
+    /* Espaçamento interno (mobile; aumenta na media query) */
+    padding: 20px;
+
+    /* Arredonda os cantos */
+    border-radius: 20px;
+
+    /* Coloca uma sombra */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tira o espaço de cima do h3 */
+.card h3 {
+    margin-top: 0;
+}
+
+/* Remove a margem da mídia */
+.midia {
+    margin: 0;
+}
+
+/* Configuração dos vídeos e áudios */
+.midia video,
+.midia audio {
+    /* Ocupa toda a largura disponível */
+    width: 100%;
+
+    display: block;
+
+    /* Arredonda os cantos */
+    border-radius: 10px;
+}
+
+/* LEGENDA DOS TEXTOS DO CARD */
+
+.midia figcaption {
+    /* Espaço entre a mídia e a legenda */
+    margin-top: 15px;
+
+    font-size: 16px;
+
+    /* Centraliza a legenda */
+    text-align: center;
+}
+
+
+/* VÍDEO DO YOUTUBE */
+
+/* Container usado para deixar o vídeo responsivo */
+.video-container {
+    width: 100%;
+}
+
+/* Configuração do vídeo do YouTube */
+.video-container iframe {
+    width: 100%;
+
+    /* Mantém o formato 16:9 */
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 10px;
+}
+
+
+/* PÁGINA GRÁFICOS */
+
+/* Configuração do card do gráfico */
+.card-grafico {
+    /* Coloca o título e o gráfico em coluna */
+    display: flex;
+    flex-direction: column;
+
+    /* Centraliza o conteúdo na horizontal */
+    align-items: center;
+
+    /* Ocupa a largura disponível, até o limite abaixo */
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Título do gráfico */
+.card-grafico h3 {
+    margin-top: 0;
+}
+
+/* Faz o gráfico não passar do tamanho do card */
+.card-grafico svg {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* CONFIGURAÇÃO DO CANVAS */
+
+/* Configuração do canvas usado nos gráficos */
+canvas {
+    max-width: 100%;
+    /* borda*/
+    border: 1px solid #ccc;
+    /* Fundo branco */
+    background: #fff;
+}
+
+
+/* GRÁFICOS EM BARRAS */
+
+.barra {
+    /* Cor das barras */
+    fill: rgba(240, 59, 14, 0.34);
+    /* Faz a mudança ficar mais suave */
+    transition: fill 0.2s ease, transform 0.2s ease;
+    /* Define o ponto de origem da transformação */
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+/* Quando passar o mouse em cima da barra */
+.barra:hover {
+    /* Muda a cor */
+    fill: #2479d3;
+    /* Aumenta um pouco a barra */
+    transform: scaleY(1.03);
+}
+
+/* Texto dos nomes do gráfico */
+.rotulo {
+    font-size: 11px;
+    fill: #333;
+
+    /* Centraliza o texto */
+    text-anchor: middle;
+}
+
+/* Valores que aparecem no gráfico */
+.valor {
+    font-size: 11px;
+    fill: #333;
+    text-anchor: middle;
+
+    /* Deixa o valor em negrito */
+    font-weight: bold;
+}
+
+
+/* PÁGINA FORMULÁRIO */
+
+/* Tira o fundo preto do header que fica dentro do card */
+.cabecalho-form {
+    display: block;
+    background-color: transparent;
+    padding: 0;
+}
+
+/* Layout em bloco comum: cada elemento ocupa a largura do card,
+   um embaixo do outro (sem flexbox aqui, para o tamanho ser previsível) */
+.form-card form {
+    display: block;
+}
+
+/* Tira a borda do fieldset */
+.form-card fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    /* O fieldset tem largura minima propria; sem isto ele pode ficar
+       mais largo que o card e empurrar os campos para fora */
+    min-width: 0;
+}
+
+/* Espaço entre os blocos do formulário */
+.form-card .aviso,
+.form-card .feedback {
+    margin: 0 0 15px 0;
+}
+
+
+/* CADA CAMPO DO FORMULÁRIO */
+
+/* O label fica em cima e o campo embaixo (cada um ocupa uma linha) */
+.campo {
+    margin-bottom: 15px;
+}
+
+/* Nome do campo */
+.campo label {
+    /* Ocupa a linha inteira, então o campo vai para baixo */
+    display: block;
+
+    /* Deixa o texto em negrito */
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+
+/* CAMPOS DE INPUT, SELECT E TEXTAREA */
+
+.campo input,
+.campo select,
+.campo textarea {
+    /* Ocupa a largura do campo e pode encolher em telas estreitas */
+    display: block;
+    width: 100%;
+
+    /* Espaço dentro do campo */
+    padding: 10px;
+
+    /* Tamanho da letra */
+    font-size: 1rem;
+
+    /* Cor e tamanho da borda */
+    border: 1px solid #767676;
+
+    /* Arredonda os cantos */
+    border-radius: 6px;
+}
+
+
+/* Caixa de mensagem*/
+.campo textarea {
+    /* Permite aumentar só na vertical */
+    resize: vertical;
+
+    /* Impede que passe da largura do card */
+    max-width: 100%;
+}
+
+
+/* BOTÃO ENVIAR */
+
+.form-card button {
+    /* Ocupa toda a largura */
+    display: block;
+    width: 100%;
+    /* Espaçamento interno */
+    padding: 12px;
+    /* Tamanho do texto */
+    font-size: 1rem;
+    /* Cor do texto */
+    color: rgb(253, 252, 252);
+    /* Cor do botão */
+    background-color: #7a7c06c0;
+    /* Remove a borda */
+    border: none;
+    /* Arredonda os cantos */
+    border-radius: 6px;
+    /* Muda o cursor para mãozinha */
+    cursor: pointer;
+}
+
+/* EFEITO AO PASSAR O MOUSE NO BOTÃO */
+
+.form-card button:hover {
+    /* Muda a cor do botão */
+    background-color: rgba(46, 52, 100, 0.9);
+}
+
+
+/*MEDIA QUERIES - MOBILE FIRST*/
+
+@media (min-width: 768px) {
+
+    /* PÁGINA INICIAL - FOTO E TEXTO LADO A LADO */
+
+    .sobre-interesses {
+        /* Muda de coluna para linha */
+        flex-direction: row;
+    }
+
+    /* Foto: cresce e encolhe a partir de 280px (limite no .card-inicio) */
+    .section-quadro-foto {
+        flex: 1 1 280px;
+        align-self: flex-start;
+    }
+
+    /* PÁGINA MULTIMÍDIA - CARDS EM 2 COLUNAS */
+
+    .cards {
+        /* Divide os cards em duas colunas */
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Mais espaço interno quando há espaço na tela */
+    section,
+    .card {
+        padding: 30px;
+    }
+
+    /* Tabela do currículo com mais respiro */
+    .card-tecnologias table {
+        font-size: 1rem;
+    }
+
+    /* Células da tabela mais espaçadas nas laterais */
+    .card-tecnologias th,
+    .card-tecnologias td {
+        padding: 8px 20px;
+    }
+}
+
+ 
+ /* CP3 - JAVASCRIPT: tema, boas-vindas, interesses, formulário*/
+
+/* Botão do tema (criado pelo JS dentro do header) */
+.btn-tema {
+    /* Área de toque mínima */
+    min-height: 44px;
+
+    /* Espaço dentro do botão */
+    padding: 8px 14px;
+
+    /* Tamanho e cor do texto */
+    font-size: 0.9rem;
+    color: rgb(255, 254, 254);
+
+    /* Cor de fundo, borda e cantos arredondados */
+    background-color: #884608d8;
+    border: 1px solid #dddada;
+    border-radius: 6px;
+
+    /* Mãozinha ao passar o mouse */
+    cursor: pointer;
+}
+
+/* Cor do botão de tema ao passar o mouse */
+.btn-tema:hover {
+    background-color: #a85a0e;
+}
+
+/* Botões e campos usados nas features da página inicial */
+.btn {
+    /* Área de toque mínima */
+    min-height: 44px;
+
+    /* Espaço dentro do botão */
+    padding: 8px 16px;
+    font-size: 1rem;
+
+    /* Texto branco sobre fundo escuro, sem borda */
+    color: white;
+    background-color: #111111;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Cor do botão ao passar o mouse */
+.btn:hover {
+    background-color: rgba(23, 28, 34, 0.9);
+}
+
+/* Botão secundário: só contorno, sem preenchimento */
+.btn-secundario {
+    background-color: transparent;
+
+    /* Usa a mesma cor do texto ao redor */
+    color: inherit;
+    border: 1px solid currentColor;
+}
+
+/* Bloco de formulário simples (rótulo + campo) da página inicial */
+.form-linha {
+    /* Empilha o rótulo, o campo e o erro */
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+
+    /* Limita a largura e centraliza no card */
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* Rótulo em negrito */
+.form-linha label {
+    font-weight: bold;
+}
+
+.linha-campo {
+    display: flex;
+    flex-direction: column;
+    /* mobile-first: empilhado */
+    gap: 8px;
+}
+
+/* Campo de texto ao lado (ou acima) do botão */
+.linha-campo input {
+    /* Ocupa o espaço que sobra e pode encolher */
+    flex: 1;
+    min-width: 0;
+
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #767676;
+    border-radius: 6px;
+}
+
+/* Contorno visível ao navegar por teclado (acessibilidade) */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: 3px solid #2479d3;
+    outline-offset: 2px;
+}
+
+.btn-secundario {
+    /* centraliza o botão "trocar nome" */
+    display: block;
+    margin: 12px auto 0;
+}
+
+/* Lista de interesses */
+.card-interesses {
+    text-align: center;
+}
+
+/* Parágrafos do card de interesses centralizados (anula o justify) */
+.card-interesses p {
+    text-align: center;
+}
+
+/* Lista criada pelo JS com os interesses do visitante */
+.lista-interesses {
+    /* Remove as bolinhas e o recuo padrão */
+    list-style: none;
+    margin: 16px auto 0;
+    padding: 0;
+
+    /* Limita a largura e centraliza */
+    max-width: 480px;
+
+    /* Um item embaixo do outro, com espaço entre eles */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Cada interesse: texto à esquerda e botão "Remover" à direita */
+.lista-interesses li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border: 1px solid #c9c9c9;
+    border-radius: 8px;
+    text-align: left;
+}
+
+/* Botão "Remover" de cada interesse (só contorno) */
+.lista-interesses button {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    color: inherit;
+    background: transparent;
+    border: 1px solid currentColor;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Mensagem "lista vazia" em itálico */
+.vazio {
+    font-style: italic;
+}
+
+/* Mensagens de erro, aviso e sucesso (sempre visíveis na tela) */
+.erro {
+    margin: 0;
+
+    /* Reserva a altura de uma linha para a tela não "pular" quando o erro aparece */
+    min-height: 1.2em;
+    font-size: 0.875rem;
+
+    /* Vermelho escuro com bom contraste */
+    color: #8f011b;
+    text-align: left;
+}
+
+/* Borda vermelha nos campos com erro */
+.campo input.invalido,
+.campo select.invalido,
+.campo textarea.invalido,
+.linha-campo input.invalido {
+    border: 2px solid #8f011b;
+}
+
+/* Base das caixas de aviso e de feedback do formulário */
+.aviso,
+.feedback {
+    margin: 0;
+    padding: 10px 14px;
+    border-radius: 6px;
+    text-align: left;
+}
+
+/* Aviso informativo (azul claro), ex.: rascunho recuperado */
+.aviso {
+    background: #e3f2fd;
+    color: #0d3c61;
+}
+
+/* Feedback de sucesso (verde) */
+.feedback.sucesso {
+    background: #e8f5e9;
+    color: #1b5e20;
+}
+
+/* Feedback de falha (vermelho) */
+.feedback.falha {
+    background: #fdecea;
+    color: #8a0017;
+}
+
+
+/* ----------------------------------------------------------
+   TEMA ESCURO: ativado pela classe tema-escuro no <body> 
+   ---------------------------------------------------------- */
+body.tema-escuro {
+    background-color: #0b1620;
+    color: #e6edf3;
+}
+
+/* Cards e seções com fundo azul escuro e texto claro */
+body.tema-escuro section,
+body.tema-escuro .card,
+body.tema-escuro .card-inicio,
+body.tema-escuro .section-quem-so-eu,
+body.tema-escuro .section-quadro-foto {
+    background-color: #16293a;
+    color: #e6edf3;
+}
+
+/* Títulos e currículo em branco, com a linha de baixo também branca */
+body.tema-escuro section h2,
+body.tema-escuro .card-curriculo,
+body.tema-escuro .card-curriculo h2 {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+}
+
+/* O card do currículo em si não leva linha embaixo */
+body.tema-escuro .card-curriculo {
+    border-bottom: none;
+}
+
+/* Links do conteúdo em azul claro, legíveis no fundo escuro */
+body.tema-escuro main a {
+    color: #8ab4f8;
+}
+
+/* Campos do formulário com fundo escuro e texto claro */
+body.tema-escuro .campo input,
+body.tema-escuro .campo select,
+body.tema-escuro .campo textarea,
+body.tema-escuro .linha-campo input {
+    background-color: #0f1e2b;
+    color: #e6edf3;
+    border-color: #8aa0b3;
+}
+
+/* Botões em azul, para se destacarem no fundo escuro */
+body.tema-escuro .btn,
+body.tema-escuro .form-card button {
+    background-color: #2f6fb5;
+}
+
+/* O botão secundário continua só com contorno */
+body.tema-escuro .btn-secundario {
+    background-color: transparent;
+}
+
+/* Borda dos itens da lista de interesses mais suave */
+body.tema-escuro .lista-interesses li {
+    border-color: #3b5368;
+}
+
+/* Textos dos gráficos (SVG usam fill, não color) em tom claro */
+body.tema-escuro .rotulo,
+body.tema-escuro .valor {
+    fill: #e6edf3;
+}
+
+/* Erro em vermelho claro para ter contraste no fundo escuro */
+body.tema-escuro .erro {
+    color: #ff8a80;
+}
+
+/* Borda de campo inválido em vermelho claro */
+body.tema-escuro .campo input.invalido,
+body.tema-escuro .campo select.invalido,
+body.tema-escuro .campo textarea.invalido,
+body.tema-escuro .linha-campo input.invalido {
+    border-color: #ff8a80;
+}
+
+/* Aviso informativo na versão escura */
+body.tema-escuro .aviso {
+    background: #0f2f4a;
+    color: #bfe0ff;
+}
+
+/* Feedback de sucesso na versão escura */
+body.tema-escuro .feedback.sucesso {
+    background: #12351f;
+    color: #b9f6ca;
+}
+
+/* Feedback de falha na versão escura */
+body.tema-escuro .feedback.falha {
+    background: #3d1218;
+    color: #d8847b;
+}
+
+/* Mobile-first: no celular o campo e o botao ficam empilhados;
+   a partir de 768px ficam lado a lado */
+@media (min-width: 768px) {
+    .linha-campo {
+        flex-direction: row;
+    }
+}
+
+/* Esconde elementos (a classe e ligada/desligada pelo JS com classList).
+   Fica no fim do arquivo para vencer outras regras de display. */
+.oculto {
+    display: none;
+}
