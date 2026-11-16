@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Camilo - Multimídia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- O CSS do Bootstrap vem ANTES do estilos.css: o meu CSS carrega depois e vence nos empates -->
     <link rel="stylesheet" href="css/estilos.css">
     <script src="js/scripts.js" defer></script>
 </head>
 
 <body>
+    <a class="visually-hidden-focusable pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
     <header class="cabecalho">
         <h1>JC</h1>
         <nav class="menu-navegador-principal" aria-label="Menu principal">
@@ -23,7 +27,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="conteudo" tabindex="-1">
         <!-- CARD DO MULTÍMIDIA TÍTULO -->
         <section class="card-titulo">
             <h2>Multimídia</h2>
@@ -36,10 +40,18 @@
             <article class="card">
                 <h3>Vídeo</h3>
                 <figure class="midia">
-                    <video controls>
+                    <video controls aria-describedby="alt-video">
                         <source src="multimidia/Dia_D_jornais.mp4" type="video/mp4">
                     </video>
                     <figcaption><strong>II Guerra Mundial - DIA D - Jornais da epóca - 06-06-1944.</strong></figcaption>
+                    <!-- ALTERNATIVA EM TEXTO: quem não enxerga ou não consegue ver o vídeo tem a descrição -->
+                    <details>
+                        <summary>Descrição do vídeo em texto</summary>
+                        <p id="alt-video">O vídeo exibe uma foto em preto e branco de soldados aliados desembarcando de
+                            uma lancha na praia, seguida das primeiras páginas de jornais de 6 de junho de 1944 que
+                            noticiaram o Dia D: Diário de Notícias (Portugal), O Estado de S. Paulo e outros jornais com
+                            manchetes como "A invasão da Europa", "Começou a invasão" e "Combates na França".</p>
+                    </details>
                 </figure>
             </article>
 
@@ -63,7 +75,7 @@
                 <figure class="midia">
                     <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/X1aFkAkFASk?si=glujsFlFJ_McLsrL"
-                            title="YouTube video player"
+                            title="Vídeo do YouTube: Vingadores - Doutor Destino (legendado)"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
@@ -74,7 +86,7 @@
         </div>
     </main>
     <!--RODAPÉ-->
-    <footer>
+    <footer class="footer">
         <p>
             Trabalho Individual - Site Pessoal / Portfólio -
             Desenvolvimento Front-end para Web.

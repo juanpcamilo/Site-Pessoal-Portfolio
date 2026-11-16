@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Camilo</title> <!--TÍTULO ABA GUIA DA PÁGINA-->
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- O CSS do Bootstrap vem ANTES do estilos.css: o meu CSS carrega depois e vence nos empates -->
     <link rel="stylesheet" href="css/estilos.css">
 
     <script src="js/scripts.js" defer></script>
 </head> <!-- FECHAMENTO DOS META DADOS E O TÍTULO DA ABA -->
 
 <body> <!-- CORPO DA PÁGINA -->
+
+    <a class="visually-hidden-focusable pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
     <header class="cabecalho"> <!--CABEÇALHO DA PÁGINA INICIAL-->
         <h1>JC</h1> <!--TÍTULO PRINCIPAL DA PÁGINA INICIAL-->
@@ -29,7 +33,7 @@
         </nav> <!-- FECHAMENTO DA NAVEGAÇÃO DO MENU -->
     </header> <!--FECHAMENTO DO CABEÇALHO DA PÁGINA INICIAL -->
 
-    <main class="conteudo-pagina-menu pagina-inicio"> <!-- CONTEÚDO DA PÁGINA INICIAL DO MENU -->
+    <main class="conteudo-pagina-menu pagina-inicio" id="conteudo" tabindex="-1"> <!-- CONTEÚDO DA PÁGINA INICIAL DO MENU -->
         <!-- CARD DO TÍTULO DA PÁGINA OLÁ, BEM-VINDO(A)-->
         <section class="card-titulo">
             <!-- O JS troca este texto por "Olá, [nome]!" quando já existe um nome salvo -->
@@ -53,7 +57,7 @@
             <div class="card-inicio section-quadro-foto">
 
                 <figure>
-                    <img src="img/foto_juan.jpg"
+                    <img class="img-fluid" src="img/foto_juan.jpg"
                         alt="Foto de Juan Camilo, estudante do 2º semestre de Análise e Desenvolvimento de Sistemas">
                     <!--LEGENDA DA FOTO-->
                     <figcaption>

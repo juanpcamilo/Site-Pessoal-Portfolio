@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Camilo - Gráficos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- O CSS do Bootstrap vem ANTES do estilos.css: o meu CSS carrega depois e vence nos empates -->
     <link rel="stylesheet" href="css/estilos.css">
     <script src="js/scripts.js" defer></script>
 </head>
 
 <body>
+
+    <a class="visually-hidden-focusable pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
     <header class="cabecalho">
         <h1>JC</h1>
@@ -25,7 +29,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="conteudo" tabindex="-1">
         <!-- CARD DO TÍTULO DA PÁGINA !-->
         <section class="card-grafico">
             <h2>Desenho e Gráfico</h2>
@@ -35,7 +39,9 @@
         <!-- DESENHO: CASA COM O SOL -->
         <section class="card-grafico">
             <h3>Desenho — Casa</h3>
-            <svg width="280" height="200" viewBox="0 0 280 200">
+            <svg width="280" height="200" viewBox="0 0 280 200" role="img" aria-labelledby="titulo-casa desc-casa">
+                <title id="titulo-casa">Desenho de uma casa com sol</title>
+                <desc id="desc-casa">Casa de parede azul-clara e telhado vermelho sobre um gramado verde, com céu azul e um sol amarelo no canto superior direito.</desc>
                 <!-- CÉU -->
                 <rect x="0" y="0" width="280" height="200" fill="#cdeeff" />
 
@@ -56,7 +62,9 @@
         <!-- GRÁFICO: BARRAS EM SVG E ESTILIZADO COM CSS -->
         <section class="card-grafico">
             <h3>Maiores Campeões da Copa do Mundo!</h3>
-            <svg width="280" height="200" viewBox="0 0 280 200">
+            <svg width="280" height="200" viewBox="0 0 280 200" role="img" aria-labelledby="titulo-copa desc-copa">
+                <title id="titulo-copa">Gráfico de barras: maiores campeões da Copa do Mundo</title>
+                <desc id="desc-copa">Brasil, 5 títulos; Alemanha, 4 títulos; Itália, 4 títulos; Argentina, 3 títulos.</desc>
                 <!-- A LINHA DA BASE -->
                 <line x1="30" y1="170" x2="270" y2="170" stroke="#999" stroke-width="1" />
 
@@ -82,8 +90,8 @@
 
     </main>
     <!--RODAPÉ-->
-    <footer>
-        <p>Trabalho Individual - Site Pessoal / Portfólio - Desenvolvimento Front-end para Web.</p>
+    <footer class="footer">
+        <p class="footer-text">Trabalho Individual - Site Pessoal / Portfólio - Desenvolvimento Front-end para Web.</p>
     </footer>
 
 </body>

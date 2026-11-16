@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Camilo - Formulário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- O CSS do Bootstrap vem ANTES do estilos.css: o meu CSS carrega depois e vence nos empates -->
     <link rel="stylesheet" href="css/estilos.css">
     <script src="js/scripts.js" defer></script>
 </head>
 
 <body>
+    <a class="visually-hidden-focusable pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
     <!-- CABEÇALHO DO SITE -->
     <header class="cabecalho">
         <h1>JC</h1>
@@ -27,7 +31,7 @@
     </header>
 
     <!-- CONTEÚDO PRINCIPAL DO MENU -->
-    <main class="conteudo-pagina-menu">
+    <main class="conteudo-pagina-menu" id="conteudo" tabindex="-1">
 
         <!-- CARD DO FORMULÁRIO -->
         <section class="card form-card">
@@ -47,36 +51,36 @@
                 <fieldset>
                     <legend>DADOS PARA CONTATO</legend>
 
-                    <div class="campo">
+                    <div class="campo mb-3">
                         <label for="nome">Nome completo</label>
-                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" autocomplete="name"
+                        <input class="form-control" type="text" id="nome" name="nome" placeholder="Digite seu nome" autocomplete="name"
                             aria-describedby="erro-form-nome">
                         <p class="erro" id="erro-form-nome"></p>
                     </div>
 
-                    <div class="campo">
+                    <div class="campo mb-3">
                         <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="nome@email.com" autocomplete="email"
+                        <input class="form-control" type="email" id="email" name="email" placeholder="nome@email.com" autocomplete="email"
                             aria-describedby="erro-form-email">
                         <p class="erro" id="erro-form-email"></p>
                     </div>
 
-                    <div class="campo">
+                    <div class="campo mb-3">
                         <label for="celular">Celular</label>
-                        <input type="tel" id="celular" name="celular" placeholder="(11) 91234-5678" autocomplete="tel"
+                        <input class="form-control" type="tel" id="celular" name="celular" placeholder="(11) 91234-5678" autocomplete="tel"
                             aria-describedby="erro-form-celular">
                         <p class="erro" id="erro-form-celular"></p>
                     </div>
 
-                    <div class="campo">
+                    <div class="campo mb-3">
                         <label for="data">Data</label>
-                        <input type="date" id="data" name="data" aria-describedby="erro-form-data">
+                        <input class="form-control" type="date" id="data" name="data" aria-describedby="erro-form-data">
                         <p class="erro" id="erro-form-data"></p>
                     </div>
 
-                    <div class="campo">
+                    <div class="campo mb-3">
                         <label for="assunto">Assunto</label>
-                        <select id="assunto" name="assunto" aria-describedby="erro-form-assunto">
+                        <select class="form-select" id="assunto" name="assunto" aria-describedby="erro-form-assunto">
                             <option value="">Selecione...</option>
                             <option value="proposta">Proposta</option>
                             <option value="duvida">Dúvida</option>
@@ -85,9 +89,9 @@
                         <p class="erro" id="erro-form-assunto"></p>
                     </div>
 
-                    <div class="campo">
+                    <div class="campo mb-3">
                         <label for="mensagem">Mensagem</label>
-                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem"
+                        <textarea class="form-control" id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem"
                             aria-describedby="erro-form-mensagem"></textarea>
                         <p class="erro" id="erro-form-mensagem"></p>
                     </div>
@@ -102,7 +106,7 @@
     </main>
 
     <!-- RODAPÉ-->
-    <footer class="main-footer">
+    <footer class="footer">
         <p class="footer-text">Trabalho Individual - Site Pessoal / Portfólio - Desenvolvimento Front-end para Web.</p>
     </footer>
 </body>

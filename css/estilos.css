@@ -1,3 +1,35 @@
+/* AJUSTE DE COMPATIBILIDADE COM O BOOTSTRAP
+   O reset do Bootstrap (Reboot) remove o negrito e as margens padrão do navegador em
+   títulos, parágrafos e listas. Como este CSS foi escrito contando com esses padrões,
+   eles são restaurados aqui para o layout não mudar. Vem depois do Bootstrap, então vence. */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: normal;
+}
+h1 { font-size: 2em;    margin: 0.67em 0; }
+h2 { font-size: 1.5em;  margin: 0.83em 0; }
+h3 { font-size: 1.17em; margin: 1em 0; }
+h4 { font-size: 1em;    margin: 1.33em 0; }
+h5 { font-size: 0.83em; margin: 1.67em 0; }
+h6 { font-size: 0.67em; margin: 2.33em 0; }
+p, ul, ol, dl {
+    margin: 1em 0;
+}
+ul, ol {
+    padding-left: 40px;
+}
+body {
+    line-height: normal;
+}
+legend {
+    /* O Bootstrap deixa a legenda maior e flutuante; aqui ela volta ao padrão do navegador */
+    float: none;
+    width: auto;
+    font-size: 1rem;
+    line-height: inherit;
+    margin-bottom: 0;
+}
+
 /* CONFIGURAÇÃO GERAL */
 html {
     /* DEFINE A FONTA PRINCIPAL DA PÁGINA */
@@ -211,18 +243,6 @@ nav ul li a {
 /* Muda a cor do botão quando passa o mouse */
 nav ul li a:hover {
     background-color: rgba(243, 243, 243, 0.795);
-}
-
-/* Mostra uma borda quando o link está selecionado */
-a:focus {
-    outline: 4px solid rgba(236, 242, 247, 0.66);
-    outline-offset: 2px;
-}
-
-/* Mostra uma borda quando a seção está selecionada */
-section:focus {
-    outline: 2px solid #d4d4d4;
-    outline-offset: 2px;
 }
 
 
@@ -765,7 +785,7 @@ canvas {
     /* Cor do texto */
     color: rgb(253, 252, 252);
     /* Cor do botão */
-    background-color: #7a7c06c0;
+    background-color: #565800; /* branco sobre este fundo = 7,5:1 */
     /* Remove a borda */
     border: none;
     /* Arredonda os cantos */
@@ -778,7 +798,7 @@ canvas {
 
 .form-card button:hover {
     /* Muda a cor do botão */
-    background-color: rgba(46, 52, 100, 0.9);
+    background-color: #2e3464;
 }
 
 
@@ -840,7 +860,7 @@ canvas {
     color: rgb(255, 254, 254);
 
     /* Cor de fundo, borda e cantos arredondados */
-    background-color: #884608d8;
+    background-color: #7a3b00; /* branco sobre este fundo = 8,6:1 */
     border: 1px solid #dddada;
     border-radius: 6px;
 
@@ -850,7 +870,7 @@ canvas {
 
 /* Cor do botão de tema ao passar o mouse */
 .btn-tema:hover {
-    background-color: #a85a0e;
+    background-color: #8a4a00;
 }
 
 /* Botões e campos usados nas features da página inicial */
@@ -919,15 +939,6 @@ canvas {
     font-size: 1rem;
     border: 1px solid #767676;
     border-radius: 6px;
-}
-
-/* Contorno visível ao navegar por teclado (acessibilidade) */
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: 3px solid #2479d3;
-    outline-offset: 2px;
 }
 
 .btn-secundario {
@@ -1155,4 +1166,35 @@ body.tema-escuro .feedback.falha {
 /* Garante que o atributo hidden esconda o elemento, mesmo com display definido no CSS */
 [hidden] {
     display: none !important;
+}
+
+
+/* ACESSIBILIDADE */
+
+/* FOCO VISÍVEL (só no teclado): anel amarelo + anel preto.
+   Os dois anéis juntos aparecem tanto em fundo claro quanto escuro, nos dois temas.
+   !important porque o Bootstrap (.form-control:focus) também mexe em outline e box-shadow. */
+:focus-visible {
+    outline: 3px solid #ffbf47 !important;
+    outline-offset: 2px !important;
+    box-shadow: 0 0 0 6px #000 !important;
+}
+
+/* LINK "PULAR PARA O CONTEÚDO": escondido até receber foco (classe visually-hidden-focusable do Bootstrap) */
+.pular-conteudo:focus {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    z-index: 9999;
+    padding: 12px 16px;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+/* O <main> só recebe foco pelo link acima; não precisa de contorno */
+main:focus {
+    outline: none !important;
+    box-shadow: none !important;
 }
